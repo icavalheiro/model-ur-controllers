@@ -1,13 +1,12 @@
 {
   "name": "model-ur-controllers",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prestart": "npm run test",
     "start": "node index",
-    "test": "mocha -c ./tests/",
-    "publish": "npm push"
+    "test": "mocha -c ./tests/"
   },
   "author": "Ivan S Cavalheiro",
   "license": "MIT",
