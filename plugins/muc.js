@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 module.exports = {
-  muc(controllersDir, app){
+  muc(controllersDir, app, baseUrl = ''){
 
     //read the controller directory to get all the controllers in it
     fs.readdirSync(controllersDir).forEach(function(file) {
@@ -26,13 +26,13 @@ module.exports = {
             controller[key].method = controller[key].method || 'get'
             controller[key].handler = controller[key].handler || (() => {});
 
-            app[controller[key].method](`/${name}/${key}/:id`, controller[key].handler)
-            app[controller[key].method](`/${name}/${key}/`, controller[key].handler)
+            app[controller[key].method](`${baseUrl}/${name}/${key}/:id`, controller[key].handler)
+            app[controller[key].method](`${baseUrl}/${name}/${key}/`, controller[key].handler)
           } else {
             //map the other functions if app supports it
             if(typeof(app[key]) == 'function'){
-              app[key](`/${name}/`, controller[key]);
-              app[key](`/${name}/:id`, controller[key]);
+              app[key](`${baseUrl}/${name}/`, controller[key]);
+              app[key](`${baseUrl}/${name}/:id`, controller[key]);
             }
           }
 

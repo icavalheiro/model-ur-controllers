@@ -1,6 +1,6 @@
 {
   "name": "model-ur-controllers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
   },
   "author": "Ivan S Cavalheiro",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icavalheiro/model-ur-controllers.git"
+  },
   "keywords": [
     "express",
     "mvc",

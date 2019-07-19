@@ -3,3 +3,4 @@ yarn*
 package-*.json
 .vs/
 .vscode/
+*.tgz

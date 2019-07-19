@@ -95,3 +95,9 @@ module.exports = {
     }
 }
 ```
+
+### Base URL
+Just send a thrid parameter to the `muc` and it will prepend it to all the routing:
+```js
+muc('./controllers/', app, '/api')
+```
