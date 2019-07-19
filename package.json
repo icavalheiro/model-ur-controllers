@@ -1,0 +1,25 @@
+{
+  "name": "model-ur-controllers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run test",
+    "start": "node index",
+    "test": "mocha -c ./tests/",
+    "publish": "npm push"
+  },
+  "author": "Ivan S Cavalheiro",
+  "license": "MIT",
+  "keywords": [
+    "express",
+    "mvc",
+    "simple",
+    "controller"
+  ],
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
+    "supertest": "^4.0.2"
+  }
+}
